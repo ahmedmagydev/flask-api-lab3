@@ -1,0 +1,68 @@
+<openerp>
+
+
+<data>
+  
+   <record id="hms_department_view_form" model="ir.ui.view">
+    <field name="name">hms.department.view.form</field>
+    <field name="model">hms.department</field>
+    <field name="arch" type="xml">
+        <form string="">
+            <sheet>
+                <group>
+                    <group>
+                        <field name="name" />
+                        <field name="capacity" />
+                    </group>
+                    <group>
+                        <field name="is_open" />
+                        
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Patient">
+                        <field name="patient_id" />
+                    </page>
+                </notebook>
+            </sheet>
+        </form>
+    </field>
+   </record>
+
+    <record id="hms_department_action" model="ir.actions.act_window">
+    <field name="name">Department</field>
+    <field name="res_model">hms.department</field>
+    <field name="view_mode">tree,form</field>
+
+        
+    
+   </record>
+
+
+
+    <!-- <menuitem
+    id="department_menu"
+    name="Department"
+    parent="main_hospital_roote_menu"
+   
+    /> 
+
+
+    <menuitem
+        id="hms_department_menu"
+        name="Department"
+        action="hms_department_action"
+        
+        parent="department_menu"
+        sequence="1"/> -->
+<!-- parent="hospital_roote_menu" -->
+</data>
+
+
+
+
+
+
+
+
+</openerp>

@@ -1,0 +1,60 @@
+<openerp>
+
+<data>
+
+    <record id="hms_doctor_action" model="ir.actions.act_window">
+        <field name="name">Action Name</field>
+        <field name="res_model">hms.doctor</field>
+        <field name="view_mode">tree,form</field>
+      
+    </record>
+
+    <record id="hms_doctor_view_form" model="ir.ui.view">
+        <field name="name">hms.doctor.view.form</field>
+        <field name="model">hms.doctor</field>
+        <field name="arch" type="xml">
+            <form string="Doctor Information">
+                <sheet>
+                    <group>
+                        <group >
+                            <field name="first_name" />
+                            <field name="age" />
+                            
+                        </group>
+                        <group >
+                            <field name="last_name" />
+                            <field name="address" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page  string="Patient">
+                              <field name="patient_ids" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+<!--     
+     <menuitem
+    id="doctor_menu"
+    name="Doctor"
+    parent="main_hospital_roote_menu"
+    /> 
+
+
+    <menuitem
+        id="hms_doctor_menu"
+        name="Doctor"
+        action="hms_doctor_action"
+       parent="doctor_menu"
+        /> -->
+
+<!-- parent="hospital_roote_menu" -->
+</data>
+
+
+
+</openerp>
